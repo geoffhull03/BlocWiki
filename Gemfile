@@ -20,6 +20,11 @@ group :development, :test do
   gem 'faker'
   gem 'factory_girl_rails'
   gem 'pry-rails'
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
 end
 
 group :development do
@@ -34,7 +39,7 @@ group :development do
   gem 'figaro'
   gem 'rails', '~> 5.1.0'
 
-  gem 'sqlite3'
+
   gem 'puma', '~> 3.7'
   gem 'sass-rails', '~> 5.0'
   gem 'uglifier', '>= 1.3.0'
@@ -43,6 +48,7 @@ group :development do
   gem 'jbuilder', '~> 2.5'
   gem 'bootstrap-sass'
   gem 'rails-controller-testing'
+  gem 'rails_12factor'
 
 
 end
