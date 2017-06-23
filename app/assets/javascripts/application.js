@@ -14,3 +14,9 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+document.addEventListener("turbolinks:load", function() {
+    if ($('li.active').html() != undefined) {
+        $('li.active').removeClass('active');
+    }
+    $('a[href="' + location.pathname + '"]').parent('li').addClass('active');
+});
