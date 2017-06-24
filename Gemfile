@@ -17,7 +17,6 @@ group :development do
   gem 'coffee-rails'
   gem 'jquery-rails'
   gem 'turbolinks'
-  gem 'bootstrap'
   gem 'figaro'
 
 end
@@ -33,4 +32,6 @@ group :development, :test do
   gem 'pry-rails'
 end
 
+gem 'rails-controller-testing'
+gem 'devise'
 gem 'bootstrap-sass'
