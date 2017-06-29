@@ -35,3 +35,4 @@ end
 gem 'rails-controller-testing'
 gem 'devise'
 gem 'bootstrap-sass'
+gem 'sendgrid-ruby'

@@ -64,7 +64,7 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.3)
-    erubi (1.6.0)
+    erubi (1.6.1)
     execjs (2.7.0)
     factory_girl (4.8.0)
       activesupport (>= 3.0.0)
@@ -97,6 +97,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.2.0)
     minitest (5.10.2)
+    mustermann (1.0.0)
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
@@ -109,6 +110,8 @@ GEM
     pry-rails (0.3.6)
       pry (>= 0.10.4)
     rack (2.0.3)
+    rack-protection (2.0.0)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.1.1)
@@ -168,6 +171,7 @@ GEM
       rspec-support (~> 3.6.0)
     rspec-support (3.6.0)
     ruby_dep (1.5.0)
+    ruby_http_client (3.1.0)
     sass (3.4.24)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
@@ -175,12 +179,20 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    sendgrid-ruby (5.0.0)
+      ruby_http_client (~> 3.0)
+      sinatra (>= 1.4.7, < 3)
     shoulda (3.5.0)
       shoulda-context (~> 1.0, >= 1.0.1)
       shoulda-matchers (>= 1.4.1, < 3.0)
     shoulda-context (1.2.2)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
+    sinatra (2.0.0)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.0)
+      tilt (~> 2.0)
     slop (3.6.0)
     spring (2.0.2)
       activesupport (>= 4.2)
@@ -233,6 +245,7 @@ DEPENDENCIES
   rails_12factor
   rspec-rails
   sass-rails
+  sendgrid-ruby
   shoulda
   spring
   sqlite3
