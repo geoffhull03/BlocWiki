@@ -12,7 +12,7 @@ require 'faker'
     User.create!(
         email: Faker::Internet.email,
         password: Faker::Internet.password(6),
-        role: Faker::Number.between(0,2),
+        role: Faker::Number.between(0,1),
         confirmed_at: Time.now
     )
 end
