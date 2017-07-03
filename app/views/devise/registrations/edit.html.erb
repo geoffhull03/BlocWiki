@@ -36,6 +36,19 @@
   </div>
 <% end %>
 
+<div class="memberships">
+  <h3>Update My Membership</h3>
+  <% if current_user.standard? %>
+    <p>You are currently enrolled in Blocipedia as a <strong><u><%= "#{current_user.role}" %></strong></u> To change your membership, please click below.</p>
+    <%= link_to "Upgrade to premium", new_charge_path %>
+
+  <% else %>
+    <p>Premium not working for you? Fine. I don't want you here anyways.</p>
+    <%= link_to "Unsubscribe", unsub_path %>
+
+  <% end %>
+</div>
+
 <h3>Cancel my account</h3>
 
 <p>Are you a loser? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
