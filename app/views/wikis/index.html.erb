@@ -1,15 +1,16 @@
 <h1>All Wikis</h1>
-
 <div class="form-group">
   <%=link_to "Make your Own Wiki!", new_path, class: 'btn btn-success'%>
 </div>
 
- <% @wikis.each do |wiki| %>
- <div class="media">
-   <div class="media-body">
-     <h4 class="media-heading">
-       <%= link_to wiki.title, wiki %>
-     </h4>
-   </div>
- </div>
- <% end %>
+<% @wikis.each do |wiki| %>
+  <% if wiki.private != true || is_authorized %>
+  <div class="media">
+    <div class="media-body">
+      <h4 class="media-heading">
+        <p><%= link_to wiki.title, wiki %></p>
+      </h4>
+    </div>
+  </div>
+  <% end %>
+<% end %>
