@@ -1,5 +1,9 @@
 <h1>All Wikis</h1>
 
+<div class="form-group">
+  <%=link_to "Make your Own Wiki!", new_path, class: 'btn btn-success'%>
+</div>
+
  <% @wikis.each do |wiki| %>
  <div class="media">
    <div class="media-body">

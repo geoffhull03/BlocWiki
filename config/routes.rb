@@ -13,5 +13,7 @@ Rails.application.routes.draw do
 
   get 'about' => 'welcome#about'
 
+  get 'new' => 'wikis#new'
+
   root 'welcome#index'
 end
