@@ -8,6 +8,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   enum role: [:standard, :premium, :admin]
-  
+
+  has_many :collaborators
+
 
 end

@@ -4,4 +4,8 @@
    <div class="col-md-8">
      <%= render partial: 'form', locals: { wiki: @wiki } %>
    </div>
+
+   <% if @wiki.private %>
+      <%= render partial: 'collaborators/form' %>
+   <% end %>
  </div>

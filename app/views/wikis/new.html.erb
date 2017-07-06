@@ -5,4 +5,10 @@
    <div class="col-md-8">
      <%= render partial: 'form', locals: { wiki: @wiki } %>
    </div>
+
+   <% if @wiki.private %>
+    <div class="form-group">
+      <%= render partial: 'collaborators/form', locals: { wiki: @wiki, user: current_user} %>
+    </div>
+  <% end %>
  </div>
