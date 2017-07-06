@@ -1,5 +1,15 @@
 class Wiki < ApplicationRecord
-  belongs_to :user, optional: true
+  has_many :collaborators
+  has_many :users, through: :collaborators
 
-  validates :title, :body, presence: true
+  belongs_to :user
+
+  def owner
+    self.user
+  end
+
+  def publicly_visible?
+    true if self.private == false
+  end
+
 end
