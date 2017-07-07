@@ -34,7 +34,8 @@ class WikiPolicy < ApplicationPolicy
         all_wikis = scope.all
         wikis = []
         all_wikis.each do |wiki|
-          if !wiki.private || wiki.users.include?(user)
+          Rails.logger.info wiki.id
+          if wiki.users.include?(user) || !wiki.private
             wikis << wiki
           end
         end
